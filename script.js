@@ -32,10 +32,21 @@ function display(index) {
     if (winner()) {
         displayStatus.textContent = `${currentPlayer} WINS`;
         gameOver = true;
+        function call()
+        {
+         alert("YOU WIN");
+        }
+        setTimeout(call,500);
     }
     else if (board.every(cell => cell !== '')) {
         displayStatus.textContent = 'MATCH DRAWN';
         gameOver = true;
+        function call()
+        {
+            alert("MATCH DRAWN");
+        }
+        setTimeout(call,500);
+        
     }
     else {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
